@@ -11,6 +11,9 @@
 		6356CFF728973D3D00816ABB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6356CFF628973D3D00816ABB /* ContentView.swift */; };
 		6356CFF928973D3F00816ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6356CFF828973D3F00816ABB /* Assets.xcassets */; };
 		6356CFFC28973D3F00816ABB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6356CFFB28973D3F00816ABB /* Preview Assets.xcassets */; };
+		6356D01F2897FE3500816ABB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6356D01E2897FE3500816ABB /* Lottie */; };
+		6356D0212897FE3E00816ABB /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 6356D0202897FE3E00816ABB /* movie.json */; };
+		6356D0232897FF4B00816ABB /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6356D0222897FF4A00816ABB /* LottieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		6356CFF628973D3D00816ABB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6356CFF828973D3F00816ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6356CFFB28973D3F00816ABB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6356D01C2897EC3200816ABB /* SwiftUI_NativeAPI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_NativeAPI.entitlements; sourceTree = "<group>"; };
+		6356D0202897FE3E00816ABB /* movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
+		6356D0222897FF4A00816ABB /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6356D01F2897FE3500816ABB /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +58,11 @@
 		6356CFF328973D3D00816ABB /* SwiftUI_NativeAPI */ = {
 			isa = PBXGroup;
 			children = (
+				6356D01C2897EC3200816ABB /* SwiftUI_NativeAPI.entitlements */,
 				6356CFF428973D3D00816ABB /* SwiftUI_NativeAPIApp.swift */,
+				6356D0222897FF4A00816ABB /* LottieView.swift */,
 				6356CFF628973D3D00816ABB /* ContentView.swift */,
+				6356D0202897FE3E00816ABB /* movie.json */,
 				6356CFF828973D3F00816ABB /* Assets.xcassets */,
 				6356CFFA28973D3F00816ABB /* Preview Content */,
 			);
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = SwiftUI_NativeAPI;
+			packageProductDependencies = (
+				6356D01E2897FE3500816ABB /* Lottie */,
+			);
 			productName = SwiftUI_NativeAPI;
 			productReference = 6356CFF128973D3D00816ABB /* SwiftUI_NativeAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 6356CFE828973D3D00816ABB;
+			packageReferences = (
+				6356D01D2897FE3500816ABB /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 6356CFF228973D3D00816ABB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +143,7 @@
 			files = (
 				6356CFFC28973D3F00816ABB /* Preview Assets.xcassets in Resources */,
 				6356CFF928973D3F00816ABB /* Assets.xcassets in Resources */,
+				6356D0212897FE3E00816ABB /* movie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +156,7 @@
 			files = (
 				6356CFF728973D3D00816ABB /* ContentView.swift in Sources */,
 				6356CFF528973D3D00816ABB /* SwiftUI_NativeAPIApp.swift in Sources */,
+				6356D0232897FF4B00816ABB /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +197,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -240,6 +259,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -266,12 +286,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUI_NativeAPI/SwiftUI_NativeAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_NativeAPI/Preview Content\"";
 				DEVELOPMENT_TEAM = BH7ATPEKS6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "We need to access NFC functionality";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,12 +319,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUI_NativeAPI/SwiftUI_NativeAPI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_NativeAPI/Preview Content\"";
 				DEVELOPMENT_TEAM = BH7ATPEKS6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "We need to access NFC functionality";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6356D01D2897FE3500816ABB /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6356D01E2897FE3500816ABB /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6356D01D2897FE3500816ABB /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6356CFE928973D3D00816ABB /* Project object */;
 }
